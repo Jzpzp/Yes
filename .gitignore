@@ -1,41 +1,64 @@
-# Compiled Lua sources
-luac.out
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
+local Window = Rayfield:CreateWindow({
+   Name = "Jp test script 😎",
+   LoadingTitle = "Jp test hacks nigga",
+   LoadingSubtitle = "by Jp hacks",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Jp Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "djcmpAHt", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Jzp | Keysystem",
+      Subtitle = "Go to our discord",
+      Note = "Join cord",
+      FileName = "JzpKey", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"https://pastebin.com/raw/fZ39n8v2"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
 
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
+local MainTab = Window:CreateTab("Jzp Main Nigga", nil) -- Title, Image
+local Section = MainTab:CreateSection("Main Gay")
 
-# Precompiled Headers
-*.gch
-*.pch
+Rayfield:Notify({
+   Title = "You just executed my nigga script creds to jzp",
+   Content = "Notification Content",
+   Duration = 5,
+   Image = nil,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Yeah stfu nigga",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
+local Button = MainTab:CreateButton({
+   Name = "Azure Modded Click only once's wait for it to load",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
+   end,
+})
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+local Button = MainTab:CreateButton({
+   Name = "AutoFarm",
+   Callback = function()
+   _G.AutofarmSettings = { 
+    Fps = 15, --// anything above 3 should be good, 10+ if you want to make the most cash.
+    Saver = true, --// black screen to save usage, shows wallet, timer, broken atms, profit.
+}
+loadstring(game:HttpGet("https://femboy.edu.pl/p/raw/0txodhcaxm"))()
+   end,
+})
 
